@@ -10,4 +10,4 @@ export default {
 
 const Template: Story = () => <Achievements />
 
-export const thoughts = Template.bind({});
+export const achievements = Template.bind({});

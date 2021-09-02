@@ -9,6 +9,9 @@ import Image from 'next/image';
 import { styles } from './styles';
 import Logo from '../../../public/favicon.ico';
 
+/**
+ * Display the socials and copyright information
+ */
 export const Contact = () => {
   const classes = styles();
 

@@ -6,6 +6,9 @@ import { styles } from './styles';
 import { Dock } from '../../common/Dock';
 import Headshot from '../../../public/images/Headshot.png';
 
+/**
+ * Display who I am and what I do, and a pic
+ */
 export const About = () => {
   const classes = styles();
 

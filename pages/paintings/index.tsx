@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { Paintings } from '../../src/routes/Paintings';
 
 /**
- * Display my Paintings using a collage
+ * Display the {@link Paintings} page 
  */
 export default function PaintingsPage() {
 

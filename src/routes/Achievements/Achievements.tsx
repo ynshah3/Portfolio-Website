@@ -5,6 +5,9 @@ import clsx from 'clsx';
 import { styles } from './styles';
 import { Dock } from '../../common/Dock';
 
+/**
+ * Display the achievements, education, and skills
+ */
 export const Achievements = () => {
   const classes = styles();
 

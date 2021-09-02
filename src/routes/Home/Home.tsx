@@ -5,6 +5,9 @@ import clsx from 'clsx';
 import { Dock } from '../../common/Dock';
 import { styles } from './styles';
 
+/**
+ * Displays my name and caption
+ */
 export const Home = () => {
   const classes = styles();
 

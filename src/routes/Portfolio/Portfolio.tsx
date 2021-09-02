@@ -19,8 +19,14 @@ import { ImageData} from './ImageData';
 import { styles } from './styles';
 import { Dock } from '../../common/Dock';
 
+/**
+ * Auto-Swipe the images
+ */
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
+/**
+ * Display the projects as a swipeable view with auto-play
+ */
 export const Portfolio = () => {
   const classes = styles();
   const theme = useTheme();
@@ -70,6 +76,8 @@ export const Portfolio = () => {
                 <Image
                   src={step.img}
                   alt={step.description}
+                  height={300}
+                  width={500}
                 />
               ) : null}
             </Box>

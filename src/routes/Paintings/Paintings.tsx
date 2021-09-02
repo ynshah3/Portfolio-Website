@@ -6,6 +6,9 @@ import { styles } from './styles';
 import { Dock } from '../../common/Dock';
 import Painting from '../../../public/images/Paintings.png';
 
+/**
+ * Display the paintings as a collage
+ */
 export const Paintings = () => {
   const classes = styles();
   return (

@@ -72,6 +72,10 @@ const styles = makeStyles((theme: Theme) =>
   })
 );
 
+/**
+ * The title bar consisting of the logo and the side drawer containing
+ * links to different pages
+ */
 export const Dock = (props: { children: ReactNode }) => {
   const classes = styles();
 

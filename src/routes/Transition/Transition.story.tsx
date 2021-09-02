@@ -4,7 +4,7 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import { Transition } from './Transition';
 
 export default {
-  title: 'Transition',
+  title: 'Pages/Transition',
   component: Transition
 } as Meta;
 
