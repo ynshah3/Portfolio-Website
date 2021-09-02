@@ -1,0 +1,40 @@
+:root {
+  --white: #FFF;
+  --darkestGold: #7F6921;
+  --darkGold: #947A27;
+  --gold: #BF9E32;
+  --lightGold: #D4AF37;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--white);
+}
+
+strong {
+  color: var(--lightGold);
+  font-size: 20px;
+}
+
+u {
+  color: var(--darkestGold);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+del {
+  color: var(--darkGold);
+}
+
+strong > u {
+  color: var(--gold);
+  text-decoration: var(--gold) underline overline;
+}
+
+code {
+  text-decoration: wavy underline;
+}
