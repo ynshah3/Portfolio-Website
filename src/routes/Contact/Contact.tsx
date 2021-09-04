@@ -95,7 +95,7 @@ export const Contact = () => {
                   {!matches570 && (
                     <Grid container direction='column' className={classes.dock} alignItems='center'>
                       <Grid item className={classes.centerify}>
-                        <Link href="/home" className={classes.link}>Home</Link>
+                        <Link href="/" className={classes.link}>Home</Link>
                       </Grid>
                       <Grid item className={classes.centerify}>
                         <Link href="/about" className={classes.link}>About</Link>
