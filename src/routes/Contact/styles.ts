@@ -6,7 +6,8 @@ export const styles = makeStyles({
   greeting: {
     fontFamily: 'Cedarville Cursive',
     textAlign: 'center',
-    marginTop: 100
+    marginTop: 100,
+    marginBottom: 50
   },
   footer: {
     backgroundColor: colors.lightGold,
@@ -14,6 +15,18 @@ export const styles = makeStyles({
     height: 340,
     position: 'absolute',
     bottom: 0,
+    width: '100%'
+  },
+  footerSmall: {
+    backgroundColor: colors.lightGold,
+    padding: 20,
+    height: 340,
+    width: '100%'
+  },
+  footerXSmall: {
+    backgroundColor: colors.lightGold,
+    padding: 20,
+    height: 500,
     width: '100%'
   },
   root: {

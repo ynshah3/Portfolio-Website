@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Typography, Link, Box, CssBaseline, AppBar, Toolbar} from '@material-ui/core';
+import { Grid, Typography, Link, Box, CssBaseline, AppBar, Toolbar, useMediaQuery} from '@material-ui/core';
 import clsx from 'clsx';
 import EmailIcon from '@material-ui/icons/Email';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -14,6 +14,8 @@ import Logo from '../../../public/favicon.ico';
  */
 export const Contact = () => {
   const classes = styles();
+  const matches800 = useMediaQuery('(min-width:800px)');
+  const matches570 = useMediaQuery('(min-width:570px)');
 
   return (
     <Box className={classes.root}>
@@ -40,7 +42,11 @@ export const Contact = () => {
             Thanks for Visiting!
           </Typography>
         </Grid>
-        <Grid item xs={12} className={classes.footer}>
+        <Grid item xs={12} className={
+          matches800 ? classes.footer : (
+            matches570 ? classes.footerSmall : classes.footerXSmall
+          )
+        }>
           <Grid container justifyContent="center">
             <Grid item xs={12}>
               <Grid container spacing={3} justifyContent="center">
@@ -64,26 +70,50 @@ export const Contact = () => {
                   </Grid>
                 </Grid>
                 <Grid item xs={12} className={classes.flex}>
-                  <Grid container className={classes.dock} alignItems='center'>
-                    <Grid item xs={2} className={classes.centerify}>
-                      <Link href="/home" className={classes.link}>Home</Link>
+                  {matches570 && (
+                    <Grid container className={classes.dock} alignItems='center'>
+                      <Grid item xs={2} className={classes.centerify}>
+                        <Link href="/" className={classes.link}>Home</Link>
+                      </Grid>
+                      <Grid item xs={2} className={classes.centerify}>
+                        <Link href="/about" className={classes.link}>About</Link>
+                      </Grid>
+                      <Grid item xs={2} className={classes.centerify}>
+                        <Link href="/achievements" className={classes.link}>Achievements</Link>
+                      </Grid>
+                      <Grid item xs={2} className={classes.centerify}>
+                        <Link href="/portfolio" className={classes.link}>Portfolio</Link>
+                      </Grid>
+                      <Grid item xs={2} className={classes.centerify}>
+                        <Link href="/paintings" className={classes.link}>Paintings</Link>
+                      </Grid>
+                      <Grid item xs={2} className={classes.centerify}>
+                        <Link href="/contact" className={classes.link}>Contact</Link>
+                      </Grid>
                     </Grid>
-                    <Grid item xs={2} className={classes.centerify}>
-                      <Link href="/about" className={classes.link}>About</Link>
+                  )}
+                  {!matches570 && (
+                    <Grid container direction='column' className={classes.dock} alignItems='center'>
+                      <Grid item className={classes.centerify}>
+                        <Link href="/home" className={classes.link}>Home</Link>
+                      </Grid>
+                      <Grid item className={classes.centerify}>
+                        <Link href="/about" className={classes.link}>About</Link>
+                      </Grid>
+                      <Grid item className={classes.centerify}>
+                        <Link href="/achievements" className={classes.link}>Achievements</Link>
+                      </Grid>
+                      <Grid item className={classes.centerify}>
+                        <Link href="/portfolio" className={classes.link}>Portfolio</Link>
+                      </Grid>
+                      <Grid item className={classes.centerify}>
+                        <Link href="/paintings" className={classes.link}>Paintings</Link>
+                      </Grid>
+                      <Grid item className={classes.centerify}>
+                        <Link href="/contact" className={classes.link}>Contact</Link>
+                      </Grid>
                     </Grid>
-                    <Grid item xs={2} className={classes.centerify}>
-                      <Link href="/achievements" className={classes.link}>Achievements</Link>
-                    </Grid>
-                    <Grid item xs={2} className={classes.centerify}>
-                      <Link href="/portfolio" className={classes.link}>Portfolio</Link>
-                    </Grid>
-                    <Grid item xs={2} className={classes.centerify}>
-                      <Link href="/paintings" className={classes.link}>Paintings</Link>
-                    </Grid>
-                    <Grid item xs={2} className={classes.centerify}>
-                      <Link href="/contact" className={classes.link}>Contact</Link>
-                    </Grid>
-                  </Grid>
+                  )}
                 </Grid>
               </Grid>
             </Grid>

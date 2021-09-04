@@ -10,9 +10,11 @@ export const styles = makeStyles({
     marginTop: 'calc(50vh - 150px)'
   },
   cursiveFont: {
-    fontFamily: 'Cedarville Cursive'
+    fontFamily: 'Cedarville Cursive',
+    textAlign: 'center'
   },
   condensedFont: {
-    fontFamily: 'Open Sans Condensed'
+    fontFamily: 'Open Sans Condensed',
+    textAlign: 'center'
   }
 });

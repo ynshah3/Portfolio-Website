@@ -12,7 +12,8 @@ import {
   ListItemText,
   Box,
   Grid,
-  Link
+  Link,
+  useMediaQuery
 } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
 import InfoIcon from '@material-ui/icons/Info';
@@ -39,24 +40,39 @@ const styles = makeStyles((theme: Theme) =>
       marginRight: drawerWidth,
       backgroundColor: colors.white
     },
+    appBarTop: {
+      width: '100%',
+      backgroundColor: colors.white
+    },
     appBarMargin: {
       marginTop: 64,
+    },
+    drawerMarginTop: {
+      marginTop: 0
+    },
+    contentMarginTop: {
+      marginTop: 360
     },
     margin: {
       marginLeft: 50,
       marginRight: 50
     },
-    drawer: {
+    drawerRight: {
       width: drawerWidth,
       flexShrink: 0
     },
-    drawerPaper: {
+    drawerPaperRight: {
       width: drawerWidth,
       border: 'none',
       backgroundColor: colors.lightGold
     },
-    drawerContainer: {
-      overflow: 'auto'
+    drawerTop: {
+      flexShrink: 0
+    },
+    drawerPaperTop: {
+      marginTop: 56,
+      border: 'none',
+      backgroundColor: colors.lightGold
     },
     toolbar: theme.mixins.toolbar,
     content: {
@@ -78,6 +94,7 @@ const styles = makeStyles((theme: Theme) =>
  */
 export const Dock = (props: { children: ReactNode }) => {
   const classes = styles();
+  const matches = useMediaQuery('(min-width:400px)');
 
   return (
     <Box className={classes.root}>
@@ -85,7 +102,7 @@ export const Dock = (props: { children: ReactNode }) => {
       <AppBar
         position="fixed"
         elevation={0}
-        className={classes.appBar}
+        className={matches ? classes.appBar : classes.appBarTop}
       >
         <Toolbar>
           <Grid className={classes.title}>
@@ -98,18 +115,21 @@ export const Dock = (props: { children: ReactNode }) => {
           </Grid>
         </Toolbar>
       </AppBar>
-      <Box className={clsx(classes.content, classes.appBarMargin)}>
+      <Box className={clsx(
+        classes.content,
+        matches ? classes.appBarMargin : classes.contentMarginTop
+      )}>
         {props.children}
       </Box>
       <Drawer
-        className={classes.drawer}
+        className={matches ? classes.drawerRight : classes.drawerTop}
         variant="permanent"
-        anchor="right"
+        anchor={matches ? "right" : "top"}
         classes={{
-          paper: classes.drawerPaper,
+          paper: matches ? classes.drawerPaperRight : classes.drawerPaperTop,
         }}
       >
-        <List className={classes.appBarMargin}>
+        <List className={matches ? classes.appBarMargin : classes.drawerMarginTop}>
           <Link href="/" color="inherit" underline="hover">
             <ListItem button key="Home">
               <ListItemIcon><HomeIcon className={classes.goldColor} /></ListItemIcon>

@@ -64,7 +64,7 @@ export const Achievements = () => {
         </Grid>
         <Grid container justifyContent="center" className={clsx(classes.maxWidth, classes.margin)}>
           <Grid item xs={12}>
-            <Typography variant="h2" gutterBottom className={classes.centerify}>
+            <Typography variant="h2" gutterBottom className={clsx(classes.centerify, classes.textCenter)}>
               Awards and Honors
             </Typography>
           </Grid>

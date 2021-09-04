@@ -21,7 +21,8 @@ export const styles = makeStyles(() =>
     },
     centerify: {
       display: 'flex',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      textAlign: 'center'
     },
     lightGold: {
       backgroundColor: colors.lightGold
