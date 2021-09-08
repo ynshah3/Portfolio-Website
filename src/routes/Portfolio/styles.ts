@@ -5,27 +5,21 @@ import { colors } from '../../common/theme/colors';
 export const styles = makeStyles(() =>
   createStyles({
     root: {
-      maxWidth: 500,
-      margin: 'auto',
-      flexGrow: 1,
-      flexDirection: 'column',
-      border: '2px solid ',
-      borderColor: colors.darkGold
-    },
-    header: {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      height: 100,
-      backgroundColor: colors.lightGold
+      maxWidth: 1000,
+      margin: 'auto'
     },
     centerify: {
       display: 'flex',
       justifyContent: 'center',
       textAlign: 'center'
     },
-    lightGold: {
-      backgroundColor: colors.lightGold
+    card: {
+      maxWidth: 400,
+      maxHeight: 400,
+      border: '3px solid',
+      borderColor: colors.darkGold,
+      padding: 12,
+      margin: 12
     }
   })
 );
