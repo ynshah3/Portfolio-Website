@@ -94,7 +94,7 @@ const styles = makeStyles((theme: Theme) =>
  */
 export const Dock = (props: { children: ReactNode }) => {
   const classes = styles();
-  const matches = useMediaQuery('(min-width:400px)');
+  const matches = useMediaQuery('(min-width:745px)');
 
   return (
     <Box className={classes.root}>
