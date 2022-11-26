@@ -15,11 +15,14 @@ export const styles = makeStyles(() =>
     },
     card: {
       maxWidth: 400,
-      maxHeight: 400,
+      height: 480,
       border: '3px solid',
       borderColor: colors.darkGold,
       padding: 12,
       margin: 12
+    },
+    color: {
+      color: 'var(--darkestGold)'
     }
   })
 );

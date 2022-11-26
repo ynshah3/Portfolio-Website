@@ -12,7 +12,6 @@ export const styles = makeStyles({
   footer: {
     backgroundColor: colors.lightGold,
     padding: 20,
-    height: 340,
     position: 'absolute',
     bottom: 0,
     width: '100%'
@@ -20,13 +19,6 @@ export const styles = makeStyles({
   footerSmall: {
     backgroundColor: colors.lightGold,
     padding: 20,
-    height: 340,
-    width: '100%'
-  },
-  footerXSmall: {
-    backgroundColor: colors.lightGold,
-    padding: 20,
-    height: 500,
     width: '100%'
   },
   root: {
@@ -46,7 +38,7 @@ export const styles = makeStyles({
     marginTop: 50
   },
   dock: {
-    width: 700,
+    width: 1000,
     marginTop: 30
   },
   link: {
@@ -64,7 +56,7 @@ export const styles = makeStyles({
     justifyContent: 'center'
   },
   copyright: {
-    marginTop: 70,
+    marginTop: 50,
     color: colors.darkestGold
   }
 });

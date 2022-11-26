@@ -15,7 +15,6 @@ import Logo from '../../../public/favicon.ico';
 export const Contact = () => {
   const classes = styles();
   const matches800 = useMediaQuery('(min-width:800px)');
-  const matches570 = useMediaQuery('(min-width:570px)');
 
   return (
     <Box className={classes.root}>
@@ -43,9 +42,7 @@ export const Contact = () => {
           </Typography>
         </Grid>
         <Grid item xs={12} className={
-          matches800 ? classes.footer : (
-            matches570 ? classes.footerSmall : classes.footerXSmall
-          )
+          matches800 ? classes.footer : classes.footerSmall
         }>
           <Grid container justifyContent="center">
             <Grid item xs={12}>
@@ -54,63 +51,87 @@ export const Contact = () => {
                   <Grid container spacing={3} justifyContent='center' className={classes.socials}>
                     <Grid item xs={4} className={classes.flex}>
                       <Link href="mailto:yashesperance3@gmail.com" className={classes.link} >
-                        <EmailIcon />
+                        <EmailIcon fontSize="large" />
                       </Link>
                     </Grid>
                     <Grid item xs={4} className={classes.flex}>
                       <Link href="https://www.linkedin.com/in/ynshah3" className={classes.link}>
-                        <LinkedInIcon />
+                        <LinkedInIcon fontSize="large" />
                       </Link>
                     </Grid>
                     <Grid item xs={4} className={classes.flex}>
                       <Link href="https://www.github.com/ynshah3" className={classes.link}>
-                        <GitHubIcon />
+                        <GitHubIcon fontSize="large" />
                       </Link>
                     </Grid>
                   </Grid>
                 </Grid>
                 <Grid item xs={12} className={classes.flex}>
-                  {matches570 && (
+                  {matches800 && (
                     <Grid container className={classes.dock} alignItems='center'>
                       <Grid item xs={2} className={classes.centerify}>
-                        <Link href="/" className={classes.link}>Home</Link>
+                        <Typography variant="h6" gutterBottom>
+                          <Link href="/" className={classes.link}>Home</Link>
+                        </Typography>
                       </Grid>
                       <Grid item xs={2} className={classes.centerify}>
-                        <Link href="/about" className={classes.link}>About</Link>
+                        <Typography variant="h6" gutterBottom>
+                          <Link href="/about" className={classes.link}>About</Link>
+                        </Typography>
                       </Grid>
                       <Grid item xs={2} className={classes.centerify}>
-                        <Link href="/achievements" className={classes.link}>Achievements</Link>
+                        <Typography variant="h6" gutterBottom>
+                          <Link href="/achievements" className={classes.link}>Achievements</Link>
+                        </Typography>
                       </Grid>
                       <Grid item xs={2} className={classes.centerify}>
-                        <Link href="/portfolio" className={classes.link}>Portfolio</Link>
+                        <Typography variant="h6" gutterBottom>
+                          <Link href="/portfolio" className={classes.link}>Portfolio</Link>
+                        </Typography>
                       </Grid>
                       <Grid item xs={2} className={classes.centerify}>
-                        <Link href="/paintings" className={classes.link}>Paintings</Link>
+                        <Typography variant="h6" gutterBottom>
+                          <Link href="/paintings" className={classes.link}>Paintings</Link>
+                        </Typography>
                       </Grid>
                       <Grid item xs={2} className={classes.centerify}>
-                        <Link href="/contact" className={classes.link}>Contact</Link>
+                        <Typography variant="h6" gutterBottom>
+                          <Link href="/contact" className={classes.link}>Contact</Link>
+                        </Typography>
                       </Grid>
                     </Grid>
                   )}
-                  {!matches570 && (
+                  {!matches800 && (
                     <Grid container direction='column' className={classes.dock} alignItems='center'>
                       <Grid item className={classes.centerify}>
-                        <Link href="/" className={classes.link}>Home</Link>
+                        <Typography variant="h6" gutterBottom>
+                          <Link href="/" className={classes.link}>Home</Link>
+                        </Typography>
                       </Grid>
                       <Grid item className={classes.centerify}>
-                        <Link href="/about" className={classes.link}>About</Link>
+                        <Typography variant="h6" gutterBottom>
+                          <Link href="/about" className={classes.link}>About</Link>
+                        </Typography>
                       </Grid>
                       <Grid item className={classes.centerify}>
-                        <Link href="/achievements" className={classes.link}>Achievements</Link>
+                        <Typography variant="h6" gutterBottom>
+                          <Link href="/achievements" className={classes.link}>Achievements</Link>
+                        </Typography>
                       </Grid>
                       <Grid item className={classes.centerify}>
-                        <Link href="/portfolio" className={classes.link}>Portfolio</Link>
+                        <Typography variant="h6" gutterBottom>
+                          <Link href="/portfolio" className={classes.link}>Portfolio</Link>
+                        </Typography>
                       </Grid>
                       <Grid item className={classes.centerify}>
-                        <Link href="/paintings" className={classes.link}>Paintings</Link>
+                        <Typography variant="h6" gutterBottom>
+                          <Link href="/paintings" className={classes.link}>Paintings</Link>
+                        </Typography>
                       </Grid>
                       <Grid item className={classes.centerify}>
-                        <Link href="/contact" className={classes.link}>Contact</Link>
+                        <Typography variant="h6" gutterBottom>
+                          <Link href="/contact" className={classes.link}>Contact</Link>
+                        </Typography>
                       </Grid>
                     </Grid>
                   )}
@@ -119,7 +140,7 @@ export const Contact = () => {
             </Grid>
             <Grid item xs={12} className={clsx(classes.copyright, classes.centerify)}>
               <Typography variant="body1" gutterBottom>
-                Copyright &copy; 2021 Yash Shah. All rights reserved.
+                Developed, Designed, and Thought by Yash Shah
               </Typography>
               <Typography variant="caption" gutterBottom>
                 website created using React.js, TypeScript, Material-UI

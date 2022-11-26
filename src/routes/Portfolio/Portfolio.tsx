@@ -21,7 +21,7 @@ export const Portfolio = () => {
   return (
     <Dock>
       <Typography variant="h2" gutterBottom className={classes.centerify}>
-        Portfolio Projects
+        Experience & Portfolio Projects
       </Typography>
       <Grid container justifyContent="center" className={classes.root}>
         {ImageData.map((project, index) => (
@@ -29,24 +29,23 @@ export const Portfolio = () => {
             <Image
               src={project.img}
               alt={project.description}
-              height={300}
+              height={320}
               width={500}
             />
-            <Typography variant="h6" className={classes.centerify}>
+            <Typography variant="h6" className={clsx(classes.centerify, classes.color)}>
               {project.title}
             </Typography>
             <Typography variant="body1" className={classes.centerify}>
               {project.description}
             </Typography>
             <Typography variant="caption" className={classes.centerify}>
-              ({project.techStack})
+              [{project.techStack}]
             </Typography>
             {project.link !== "" && (
               <Typography variant="body1" className={classes.centerify}>
-                Link:{'\ '}
-                <Link href={project.link}>
+                (<Link href={project.link}>
                   {project.link}
-                </Link>
+                </Link>)
               </Typography>
             )}
           </Grid>
