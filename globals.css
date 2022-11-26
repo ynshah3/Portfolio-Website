@@ -38,3 +38,7 @@ strong > u {
 code {
   text-decoration: wavy underline;
 }
+
+hr {
+  color: var(--darkestGold);
+}
